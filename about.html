@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>درباره ما</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="style/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+</head>
+<body>
+<!--header-->
+<header>
+    <!--navigation menu-->
+    <nav class="navbar navbar-light bg-light2 shadow-sm px-2 mr-0 px-md-2 pl-md-2 py-0 pr-md-5 border-bottom navbar-expand-md fixed-top">
+        <span class="hover-item d-none d-md-block"></span>
+        <a href="index.html" class="navbar-brand p-0">
+            <img src="images/logo.png" alt="logo" width="60" height="52">
+        </a>
+        <button type="button" class="navbar-toggler border-0 px-2 order-first" data-toggle="collapse"
+                data-target="#MyNavigation">
+            <span class="bar1 f-30"></span>
+            <span class="bar2 f-30"></span>
+            <span class="bar3 f-30"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="MyNavigation">
+            <ul class="navbar-nav pr-3">
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="#">نمونه سوالات</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="#">راهنما<i
+                        class="far fa-chevron-down v-1 f-11 pr-6"></i></a>
+                    <ul class="MyDropdown border p-6">
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 1</a></li>
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 2</a></li>
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 3</a></li>
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 4</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="about.html">درباره ما</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="contact.html">ارتباط با ما</a></li>
+            </ul>
+        </div>
+        <!--left navigation-->
+        <div class="register-search d-flex ml-md-5 pl-md-4">
+            <a href="#" data-target="#myModal" data-toggle="modal"
+               class="btn text-white bg-gradient shadow-none d-none d-md-block position-relative overflow-hidden f-13  py-2 px-6 mr-3 order-last">ثبت
+                نام | ورود</a>
+            <button class="f-21 pr-4 d-md-none order-last" data-target="#myModal" data-toggle="modal"><i
+                    class="fa fa-user v-4 c888"></i></button>
+            <button id="toggle-searchBox" class="f-20"><i class="fa fa-search v-5 c888 font-weight-normal"></i></button>
+        </div>
+        <!--navigation search Box-->
+        <div class="navigation-search position-absolute w-100 py-2">
+            <div class="py-1 w-85 mx-auto">
+                <form action="#" class="d-flex justify-content-center">
+                    <input type="text"
+                           class=" w-85 form-control shadow-none bg-transparent rounded-0 text-primary border-0 border-primary"
+                           placeholder="متن جستجو را وارد کنید...">
+                    <button type="submit" class="cursor-pointer search-btn position-relative f-20 ml-md-5 c555"><i
+                            class="fa fa-search font-weight-normal"></i></button>
+                </form>
+                <button class="position-absolute cursor-pointer text-dark close f-23">&times;</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade show pr-0" id="myModal">
+        <div class="modal-dialog modal-dialog-centered custom-modal modal-sm">
+            <div class="modal-content p-3 border-0 bg-white">
+                <button type="button" class="mr-auto modal-close f-17 text-left" data-dismiss="modal">
+                    <span>&times;</span></button>
+                <nav>
+                    <ul class="nav nav-tabs nav-fill">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#login"
+                                                id="log-selector">ورود</a></li>
+                        <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#register"
+                                                id="register-selector ">ثبت نام</a></li>
+                    </ul>
+                </nav>
+                <div class="tab-content pb-2 pt-4">
+                    <div class="tab-pane active" id="login">
+                        <form action="#" class="position-relative">
+                            <div class="position-relative mb-3">
+                                <label>موبایل / ایمیل</label>
+                                <input type="text" class="form-control f-14" id="input-email-login" autocomplete="off">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>رمز عبور</label>
+                                <input type="password" class="form-control f-14" id="input-pass-login">
+                            </div>
+                            <div class="text-white mb-3 bg-primary rounded py-2 d-flex align-items-center">
+                                <em class="mb-0 pr-3 text-center" id="text-random-login">ulfta3</em>
+                                <button type="button" class="float-left text-white">
+                                    <i class="fa cursor-pointer v-2 fa-refresh"></i>
+                                </button>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>متن بالا را وارد کنید</label>
+                                <input type="text" class="form-control f-14 input-TextRandom"
+                                       id="input-TextRandom-login">
+                            </div>
+                            <button type="reset" class="btn btn-secondary btn-reset float-right">بازگشت
+                            </button>
+                            <button type="submit" class="btn btn-success float-left mb-4" id="btn-login">ورود</button>
+                            <div class="clearfix"></div>
+                            <a href="#" id="dont-account" class="c666 mr-5 pr-3 f-13">حساب کاربری ندارید؟ ثبت نام
+                                کنید</a>
+                            <div class="p-1 alert alert-danger rounded message-form shadow position-absolute">
+                                <button class="cursor-pointer f-20 float-left" id="btn-message-close-login">&times;
+                                </button>
+                                <p class="m-3"></p>
+                                <div class="pbar bg-danger"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="register">
+                        <form action="#" class="position-relative">
+                            <div class="position-relative mb-3">
+                                <label>نام کاربری</label>
+                                <input type="text" class="form-control f-14" id="input-username-register"
+                                       autocomplete="off">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>موبایل / ایمیل</label>
+                                <input type="text" class="form-control f-14" id="input-email-register"
+                                       autocomplete="off">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>رمز عبور</label>
+                                <input type="password" class="form-control f-14" id="input-pass-register">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>تکرار رمز عبور</label>
+                                <input type="password" class="form-control f-14" id="confirm-pass-register">
+                            </div>
+                            <div class="text-white mb-3 bg-info rounded py-2 d-flex align-items-center">
+                                <em class="mb-0 pr-3 text-center" id="text-random-register">ulfta3</em>
+                                <button type="button" class="float-left text-white">
+                                    <i class="fa cursor-pointer v-2 fa-refresh"></i>
+                                </button>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>متن بالا را وارد کنید</label>
+                                <input type="text" class="form-control f-14 input-TextRandom"
+                                       id="input-TextRandom-register" autocomplete="off">
+                            </div>
+                            <button type="reset" class="btn btn-secondary btn-reset float-right">بازگشت</button>
+                            <button type="submit" class="btn btn-success float-left mb-4" id="btn-register">ثبت نام
+                            </button>
+                            <div class="clearfix"></div>
+                            <a href="#" id="have-account" class="c666 mr-5 pr-4 f-13">حساب کاربری دارید؟ وارد شوید</a>
+                            <div class="p-1 alert alert-danger rounded message-form shadow position-absolute">
+                                <button class="cursor-pointer f-20 float-left" id="btn-message-close">&times;</button>
+                                <p class="m-3"></p>
+                                <div class="pbar bg-danger"></div>
+                            </div>
+                        </form>
+                        <form action="#" class="dnone">
+                            <h5 class="f-16 text-center my-4">کد ارسال شده به موبایل / ایمیل را وارد کنید</h5>
+                            <input type="text" class="form-control my-2" id="code-number" placeholder="-----">
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--main content-->
+<main class="mt6r bg-white mx-md-4 text-justify py-4 border rounded">
+    <div class="container">
+        <section class="row cudef">
+            <div class="col-12">
+            <h1 class="f-30 dblue mt-2">درباره گنجینه سوال</h1>
+            <p class="f-18 lh33 mt-3">
+                لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و
+                متون بلکه روزنامه و مجله در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و
+                کاربردهای متنوع با هدف بهبود ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده
+                شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی
+                الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و
+                دشواری موجود در ارائه راهکارها و شرایط سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای
+                اصلی و جوابگوی سوالات پیوسته اهل دنیای موجود طراحی اساسا مورد استفاده قرار گیرد. لورم ایپسوم متن ساختگی
+                با تولید سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه روزنامه و مجله
+                در ستون و سطرآنچنان که لازم است و برای شرایط فعلی تکنولوژی مورد نیاز و کاربردهای متنوع با هدف بهبود
+                ابزارهای کاربردی می باشد. کتابهای زیادی در شصت و سه درصد گذشته، حال و آینده شناخت فراوان جامعه و متخصصان
+                را می طلبد تا با نرم افزارها شناخت بیشتری را برای طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو
+                در زبان فارسی ایجاد کرد. در این صورت می توان امید داشت که تمام و دشواری موجود در ارائه راهکارها و شرایط
+                سخت تایپ به پایان رسد و زمان مورد نیاز شامل حروفچینی دستاوردهای اصلی و جوابگوی سوالات پیوسته اهل دنیای
+                گیرد.
+            </p>
+            <div class="mt-4">
+                <h2 class="f-22 text-right my-3 position-relative w-100">خدمات گنجینه سوال</h2>
+                <ul class="pr-6 mr-2">
+                    <li class="circle-item position-relative lh32 f-16">نمونه سوالات امتحانی</li>
+                    <li class="circle-item position-relative lh32 f-16">محتوای آموزشی</li>
+                    <li class="circle-item position-relative lh32 f-16">لورم اپیسورم متن ساختگی</li>
+                    <li class="circle-item position-relative lh32 f-16">لورم اپیسورم متن ساختگی</li>
+                    <li class="circle-item position-relative lh32 f-16">لورم اپیسورم متن ساختگی</li>
+                    <li class="circle-item position-relative lh32 f-16">لورم اپیسورم متن ساختگی</li>
+                    <li class="circle-item position-relative lh32 f-16">لورم اپیسورم متن ساختگی</li>
+                    <li class="circle-item position-relative lh32 f-16">لورم اپیسورم متن ساختگی</li>
+                </ul>
+            </div>
+            </div>
+        </section>
+    </div>
+</main>
+<!--footer-->
+<footer class="container-fluid mt-3 border-top bg-white">
+    <div class="row text-center py-1 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="#">
+                <img src="images/logo.png" width="100" height="100" alt="logo">
+            </a>
+            <ul class="mt--8">
+                <li class="py-6">
+                    <a href="#" class="dblue ml-3"><i class="fa fa-home f-17  pl-2 v-1"></i>خـانه</a>
+                </li>
+                <li class="py-6">
+                    <a href="#" class="dblue mr-3"><i class="fa fa-phone f-17  pl-2 v-1"></i>تماس با ما</a>
+                </li>
+                <li class="py-6">
+                    <a href="#" class="dblue"><i class="fa fa-book f-17  pl-2 v-1"></i>سـوالات</a>
+                </li>
+                <li class="py-6">
+                    <a href="#" class="dblue"><i class="fa fa-users f-17  pl-2 v-1"></i>درباره ما</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-10 col-sm-8 col-md-6 col-lg-5 mt-4 pt-1 pr-md-5">
+            <h3 class="org mb-4 pb-2 f-25 text-right mr-5 pr-5"><i class="fas pl-2 v-2  f-22 fa-list"></i>دستـه بنـدی
+            </h3>
+            <ul class="category-footer text-right">
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">نـمونه سوال امتحانی</a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">فیلم،پاورپوینت،محتوای آموزشی</a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">راهنما</a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">قوانین و مقررات</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9 col-lg-3 justify-content-center NamadImage-footer d-flex align-items-center">
+            <img src="images/logo-samandehi.png" class="ml-3" alt="namade1">
+            <img src="images/logo-saramad.png" alt="namade2">
+        </div>
+        <p class="col-12 mt-3 f-md-13 c777">
+            تمامی حقوق مادی و معنوی محصولات و محتوای این سایت متعلق به " گـــنجینه ســوال " بوده و هر گونه کپی برداری از
+            محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست.
+        </p>
+    </div>
+    <button class="btn btn-secondary rounded-circle fixed-bottom" id="back-top"><i class="fa fa-chevron-up"></i>
+    </button>
+</footer>
+</body>
+</html>

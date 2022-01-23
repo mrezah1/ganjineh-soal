@@ -1,0 +1,639 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>گنجینه سوال</title>
+    <link rel="icon" href="images/favicon.ico">
+    <link rel="stylesheet" href="style/web-fonts-with-css/css/fontawesome-all.min.css">
+    <link rel="stylesheet" href="style/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="style/bootstrap.min.css">
+    <link rel="stylesheet" href="style/main.css">
+    <script src="js/jquery-3.4.1.min.js" type="text/javascript"></script>
+    <script src="js/bootstrap.min.js" type="text/javascript"></script>
+    <script src="js/numscroller-1.0.js" type="text/javascript"></script>
+    <script src="js/custom.js" type="text/javascript"></script>
+</head>
+<body>
+<!--header-->
+<header>
+    <!--navigation menu-->
+    <nav class="navbar navbar-light bg-light2 shadow-sm px-2 mr-0 px-md-2 pl-md-2 py-0 pr-md-5 border-bottom navbar-expand-md fixed-top">
+        <span class="hover-item d-none d-md-block"></span>
+        <a href="#" class="navbar-brand p-0">
+            <img src="images/logo.png" alt="logo" width="60" height="52">
+        </a>
+        <button type="button" class="navbar-toggler border-0 px-2 order-first" data-toggle="collapse"
+                data-target="#MyNavigation">
+            <span class="bar1 f-30"></span>
+            <span class="bar2 f-30"></span>
+            <span class="bar3 f-30"></span>
+        </button>
+        <div class="navbar-collapse collapse" id="MyNavigation">
+            <ul class="navbar-nav pr-3">
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="#">نمونه سوالات</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="#">راهنما<i
+                        class="far fa-chevron-down v-1 f-11 pr-6"></i></a>
+                    <ul class="MyDropdown border p-6">
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 1</a></li>
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 2</a></li>
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 3</a></li>
+                        <li><a href="#" class="nav-link position-relative">لورم اپیسورم 4</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="about.html">درباره ما</a>
+                </li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="contact.html">ارتباط با
+                    ما</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="student-panel.html">پنل
+                    دانش آموز</a></li>
+                <li class="nav-item cursor-pointer"><a class="nav-link text-dark mx-1" href="teacher-panel.html">پنل
+                    معلم</a></li>
+            </ul>
+        </div>
+        <!--left navigation-->
+        <div class="register-search d-flex align-items-center ml-md-5 pl-md-4">
+
+<!--            <a href="#" data-target="#myModal" data-toggle="modal"-->
+<!--               class="btn text-white bg-gradient shadow-none d-none d-md-block position-relative overflow-hidden f-13  py-2 px-6 mr-3 order-last">ثبت-->
+<!--                نام | ورود</a>-->
+            <div href="#" class="ml-2 ml-md-4 px-2 dr-user bg--warnin f-14 position-relative ">
+                <a href="#" class="c777">
+                <i class="fa fa-user pl-6 v-1"></i>
+                علی علوی
+                <i class="fa fa-caret-down pr-6 v-2 tr"></i>
+                </a>
+                <script>
+                    if (screen.width<768) {
+                        $('.dr-user>a').text('');
+                        $('.dr-user>a').append('<i class="fa fa-user f-18 pl-6 v-3"></i>');
+                        $('.dr-user>a').prop('href', 'student-panel.html');
+                    }
+                </script>
+                <ul class="position-absolute d-none d-md-block">
+                   <li><a href="#" class="c666"><i class="fa fa-list-alt pl-6 v-1"></i>داشبورد</a></li>
+                   <li><a href="#" class="c666"><i class="fa fa-envelope pl-6 v-2"></i>پیام ها</a></li>
+                   <li><a href="#" class="c666"><i class="fa fa-user-circle pl-6 v-2"></i>پروفایل</a></li>
+                   <li><a href="#" class="c666"><i class="fa fa-sign-out-alt pl-6 v-2"></i>خروج</a></li>
+                </ul>
+            </div>
+<!--            <button class="f-21 pr-4 d-md-none order-last" data-target="#myModal" data-toggle="modal"><i-->
+<!--                    class="fa fa-user v-4 c888"></i></button>-->
+            <button id="toggle-searchBox" class="f-20"><i class="fa fa-search v-5 c888 font-weight-normal"></i></button>
+        </div>
+        <!--navigation search Box-->
+        <div class="navigation-search position-absolute w-100 py-2">
+            <div class="py-1 w-85 mx-auto">
+                <form action="#" class="d-flex justify-content-center">
+                    <input type="text"
+                           class=" w-85 form-control shadow-none bg-transparent rounded-0 text-primary border-0 border-primary"
+                           placeholder="متن جستجو را وارد کنید...">
+                    <button type="submit" class="cursor-pointer search-btn position-relative f-20 ml-md-5 c555"><i
+                            class="fa fa-search font-weight-normal"></i></button>
+                </form>
+                <button class="position-absolute cursor-pointer text-dark close f-23">&times;</button>
+            </div>
+        </div>
+    </nav>
+    <div class="modal fade show pr-0" id="myModal">
+        <div class="modal-dialog modal-dialog-centered custom-modal modal-sm">
+            <div class="modal-content position-relative p-3 border-0 bg-white">
+                <div class="before-event"></div>
+                <button type="button" class="mr-auto modal-close f-17 text-left" data-dismiss="modal">
+                    <span>&times;</span></button>
+                <nav>
+                    <ul class="nav nav-tabs nav-fill">
+                        <li class="nav-item"><a class="nav-link active" data-toggle="tab" href="#login"
+                                                id="log-selector">ورود</a></li>
+                        <li class="nav-item"><a class="nav-link " data-toggle="tab" href="#register"
+                                                id="register-selector ">ثبت نام</a></li>
+                    </ul>
+                </nav>
+                <div class="tab-content pb-2 pt-4">
+                    <div class="tab-pane active" id="login">
+                        <form action="#" class="position-relative">
+                            <div class="position-relative mb-3">
+                                <label>موبایل / ایمیل</label>
+                                <input type="text" class="form-control f-14" id="input-email-login" autocomplete="off">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>رمز عبور</label>
+                                <input type="password" class="form-control f-14" id="input-pass-login">
+                            </div>
+                            <div class="text-white mb-3 bg-primary rounded py-2 d-flex align-items-center">
+                                <em class="mb-0 pr-3 text-center" id="text-random-login">ulfta3</em>
+                                <button type="button" class="float-left text-white">
+                                    <i class="fa cursor-pointer v-2 fa-refresh"></i>
+                                </button>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>متن بالا را وارد کنید</label>
+                                <input type="text" class="form-control f-14 input-TextRandom"
+                                       id="input-TextRandom-login">
+                            </div>
+                            <button type="reset" class="btn btn-secondary btn-reset float-right">بازگشت
+                            </button>
+                            <button type="submit"
+                                    class="btn position-relative justify-content-center d-flex align-items-center btn-success float-left mb-4"
+                                    id="btn-login">ورود
+                                <span class="loading-log-reg tr d-none opacity-0"></span>
+                                <span class="spinner-border mt-3 opacity-0 text-dark spinner-border-sm"></span>
+                            </button>
+                            <div class="clearfix"></div>
+                            <a href="#" id="dont-account" class="c666 mr-5 pr-3 f-13">حساب کاربری ندارید؟ ثبت نام
+                                کنید</a>
+                            <div class="p-1 alert alert-danger rounded message-form shadow position-absolute">
+                                <button class="cursor-pointer f-20 float-left" id="btn-message-close-login">&times;
+                                </button>
+                                <p class="m-3"></p>
+                                <div class="pbar bg-danger"></div>
+                            </div>
+                        </form>
+                    </div>
+                    <div class="tab-pane fade" id="register">
+                        <form action="#" class="position-relative">
+                            <div class="position-relative mb-3">
+                                <label>نام کاربری</label>
+                                <input type="text" class="form-control f-14" id="input-username-register"
+                                       autocomplete="off">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>موبایل / ایمیل</label>
+                                <input type="text" class="form-control f-14" id="input-email-register"
+                                       autocomplete="off">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>رمز عبور</label>
+                                <input type="password" class="form-control f-14" id="input-pass-register">
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>تکرار رمز عبور</label>
+                                <input type="password" class="form-control f-14" id="confirm-pass-register">
+                            </div>
+                            <div class="text-white mb-3 bg-info rounded py-2 d-flex align-items-center">
+                                <em class="mb-0 pr-3 text-center" id="text-random-register">ulfta3</em>
+                                <button type="button" class="float-left text-white">
+                                    <i class="fa cursor-pointer v-2 fa-refresh"></i>
+                                </button>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="position-relative mb-3">
+                                <label>متن بالا را وارد کنید</label>
+                                <input type="text" class="form-control f-14 input-TextRandom"
+                                       id="input-TextRandom-register" autocomplete="off">
+                            </div>
+                            <button type="reset" class="btn btn-secondary btn-reset float-right">بازگشت</button>
+                            <button type="submit" class="btn btn-success float-left mb-4" id="btn-register">ثبت نام
+                            </button>
+                            <div class="clearfix"></div>
+                            <a href="#" id="have-account" class="c666 mr-5 pr-4 f-13">حساب کاربری دارید؟ وارد شوید</a>
+                            <div class="p-1 alert alert-danger rounded message-form shadow position-absolute">
+                                <button class="cursor-pointer f-20 float-left" id="btn-message-close">&times;</button>
+                                <p class="m-3"></p>
+                                <div class="pbar bg-danger"></div>
+                            </div>
+                        </form>
+                        <form action="#" class="dnone">
+                            <h5 class="f-16 text-center my-4">کد ارسال شده به موبایل / ایمیل را وارد کنید</h5>
+                            <input type="text" class="form-control my-2" id="code-number" placeholder="-----">
+                            <button type="submit" onclick="window.open('typeAccount.html','_parent')" class="btn btn-success  py-1 mt-2 mr-1">ارسال</button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</header>
+<!--main content all-->
+<main class="mt6r">
+    <div class="container">
+        <section class="row justify-content-md-center" id="LastQuestion_row">
+            <div class="col-12 col-md-9 col-lg-5 last-question mb-2">
+                <div class="image-overlay b-gr position-relative">
+                    <img src="images/lq3.jpg" class="w-100" alt="last question image">
+                </div>
+                <div class="information-lq position-absolute text-white">
+                    <div>
+                        <h3 class="f-30 f-md-23">علوم هفتم</h3>
+                        <p class="my-3 f-15 f-md-13">مجموعه سوالات تستی علوم تجربی کلاس هفتم</p>
+                    </div>
+                    <a href="#" class="btn f-12 f-md-10 btn-light">جزئیات بیشتر</a>
+                </div>
+            </div>
+            <div class="col-12 col-md-9 col-lg-6">
+                <div class="row">
+                    <div class="col-12 last-question ">
+                        <div class="image-overlay lq2 w-100 position-relative">
+                            <img src="images/lq1.jpg" class="w-100" alt="last question image">
+                        </div>
+                        <div class="information-lq position-absolute text-white">
+                            <div>
+                                <h3 class="f-23 f-md-20">ریاضی هشتم</h3>
+                                <p class="my-3 f-13">مجموعه سوالات تشریحی ریاضی کلاس هشتم</p>
+                            </div>
+                            <a href="#" class="btn f-11 btn-light">جزئیات بیشتر</a>
+                        </div>
+                    </div>
+                    <div class="col-6 last-question mt-2 ">
+                        <a href="#">
+                            <div class="image-overlay w-100 lq3 position-relative">
+                                <img src="images/lq6.jpg" class="w-100" alt="last question image">
+                            </div>
+                            <div class="information-lq w-100  position-absolute text-white">
+                                <div>
+                                    <h3 class="f-18 text-center">دینی ششم</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                    <div class="col-6 last-question mt-2">
+                        <a href="#">
+                            <div class="image-overlay lq3 lq4 w-100 position-relative">
+                                <img src="images/lq5.jpg" class="w-100" alt="last question image">
+                            </div>
+                            <div class="information-lq w-100  position-absolute text-white">
+                                <div>
+                                    <h3 class="f-18 text-center">ادبیات نهم</h3>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="row align-items-center my-5 text-center justify-content-center" id="ClassNameFilter_row">
+            <div class="col-10 col-md-3">
+                <label class="text-dark f-13 font-weight-bold d-block text-center lbl-form-question">مقطع تحصیلی</label>
+                <select name="maghtaae" class="form-control">
+                    <option>پیش دبستانی</option>
+                    <option>دبستان</option>
+                    <option>دوره اول متوسطه</option>
+                    <option>دوره دوم متوسطه - نظری</option>
+                    <option>دوره دوم متوسطه - فنی حرفه ای</option>
+                    <option>دوره دوم متوسطه - کار و دانش</option>
+                </select>
+            </div>
+            <div class="col-10 col-md-3">
+                <label class="text-dark f-13 font-weight-bold d-block text-center lbl-form-question">پایه تحصیلی</label>
+                <select name="BaseClass" class="form-control">
+                    <option>هفتم</option>
+                    <option>هشتم</option>
+                    <option>نهم</option>
+                    <option>دهم</option>
+                    <option>یازدهم</option>
+                    <option>دوازدهم</option>
+                </select>
+            </div>
+            <div class="col-10 col-md-3">
+                <label class="text-dark f-13 font-weight-bold d-block text-center lbl-form-question">کتاب درسی</label>
+                <select name="BookName" class="form-control">
+                    <option>ریاضی</option>
+                    <option>علوم</option>
+                    <option>اجتماعی</option>
+                    <option>دینی</option>
+                    <option>ادبیات</option>
+                    <option>زبان انگلیسی</option>
+                </select>
+            </div>
+            <div class="col-3 col-md-3">
+                <button class="btn btn-outline-dark mt-4" onclick="window.open('search_index.html','_parent')">جستجو
+                </button>
+            </div>
+        </section>
+        <section class="row justify-content-center" id="ClassName_row">
+            <article class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4">
+                <div class="number-class border-warning rounded-circle shadow">
+                    <div class="mt-3 position-relative py-4">
+                        <span class="text-light f-22 text-center position-absolute">1</span>
+                        <h3 class="f-21 mb-0 ac-warning text-center">کلاس اول</h3>
+                        <p class="mt-2 f-13">ریاضی،فارسی،پیام های آسمانی و...</p>
+                        <ul class="mt-3 f-14 px-2">
+                            <li class="dblue float-right"><i class="fa v-2 fa-book pl-1"></i>
+                                نمونه سوالات
+                            </li>
+                            <li class="float-left">20</li>
+                            <li class="clearfix my-3"></li>
+                            <li class="float-right"><i class="fa v-2 fa-comment pl-1"></i>
+                                نظرات
+                            </li>
+                            <li class="float-left">200</li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="badge badge-warning text-secondary badge-pill">
+                                <i class="fa fa-calendar pl-1"></i>
+                                20 شهریور 98</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4">
+                <div class="number-class border-danger rounded-circle shadow">
+                    <div class="mt-3 position-relative py-4">
+                        <span class="text-light bg-danger f-22 text-center position-absolute">2</span>
+                        <h3 class="f-21 mb-0 ac-danger text-center">کلاس دوم</h3>
+                        <p class="mt-2 f-13">ریاضی،فارسی،پیام های آسمانی و...</p>
+                        <ul class="mt-3 f-14 px-2">
+                            <li class="dblue float-right"><i class="fa v-2 fa-book pl-1"></i>
+                                نمونه سوالات
+                            </li>
+                            <li class="float-left">30</li>
+                            <li class="clearfix my-3"></li>
+                            <li class="float-right"><i class="fa v-2 fa-comment pl-1"></i>
+                                نظرات
+                            </li>
+                            <li class="float-left">150</li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="badge badge-danger badge-pill">
+                                <i class="fa fa-calendar pl-1"></i>
+                                30 شهریور 98</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4">
+                <div class="number-class border-primary rounded-circle shadow">
+                    <div class="mt-3 position-relative py-4">
+                        <span class="text-light bg-primary f-22 text-center position-absolute">3</span>
+                        <h3 class="f-21 mb-0 ac-primary text-center">کلاس سوم</h3>
+                        <p class="mt-2 f-13">ریاضی،فارسی،پیام های آسمانی و...</p>
+                        <ul class="mt-3 f-14 px-2">
+                            <li class="dblue float-right"><i class="fa v-2 fa-book pl-1"></i>
+                                نمونه سوالات
+                            </li>
+                            <li class="float-left">40</li>
+                            <li class="clearfix my-3"></li>
+                            <li class="float-right"><i class="fa v-2 fa-comment pl-1"></i>
+                                نظرات
+                            </li>
+                            <li class="float-left">170</li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="badge badge-primary badge-pill">
+                                <i class="fa fa-calendar pl-1"></i>
+                                30 آبان 98</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4">
+                <div class="number-class border-success rounded-circle shadow">
+                    <div class="mt-3 position-relative py-4">
+                        <span class="text-light bg-success f-22 text-center position-absolute">4</span>
+                        <h3 class="f-21 mb-0 ac-success text-center">کلاس چهارم</h3>
+                        <p class="mt-2 f-13">ریاضی،فارسی،پیام های آسمانی و...</p>
+                        <ul class="mt-3 f-14 px-2">
+                            <li class="dblue float-right"><i class="fa v-2 fa-book pl-1"></i>
+                                نمونه سوالات
+                            </li>
+                            <li class="float-left">80</li>
+                            <li class="clearfix my-3"></li>
+                            <li class="float-right"><i class="fa v-2 fa-comment pl-1"></i>
+                                نظرات
+                            </li>
+                            <li class="float-left">270</li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="badge badge-success badge-pill">
+                                <i class="fa fa-calendar pl-1"></i>
+                                5 آبان 98</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4">
+                <div class="number-class border-info rounded-circle shadow">
+                    <div class="mt-3 position-relative py-4">
+                        <span class="text-light bg-info f-22 text-center position-absolute">5</span>
+                        <h3 class="f-21 mb-0 ac-info text-center">کلاس پنجم</h3>
+                        <p class="mt-2 f-13">ریاضی،فارسی،پیام های آسمانی و...</p>
+                        <ul class="mt-3 f-14 px-2">
+                            <li class="dblue float-right"><i class="fa v-2 fa-book pl-1"></i>
+                                نمونه سوالات
+                            </li>
+                            <li class="float-left">80</li>
+                            <li class="clearfix my-3"></li>
+                            <li class="float-right"><i class="fa v-2 fa-comment pl-1"></i>
+                                نظرات
+                            </li>
+                            <li class="float-left">270</li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="badge badge-info badge-pill">
+                                <i class="fa fa-calendar pl-1"></i>
+                                5 آبان 98</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+            <article class="col-10 col-sm-8 col-md-6 col-lg-4 mb-4">
+                <div class="number-class border-secondary rounded-circle shadow">
+                    <div class="mt-3 position-relative py-4">
+                        <span class="text-light bg-secondary f-22 text-center position-absolute">6</span>
+                        <h3 class="f-21 mb-0 ac-secondary text-center">کلاس ششم</h3>
+                        <p class="mt-2 f-13">ریاضی،فارسی،پیام های آسمانی و...</p>
+                        <ul class="mt-3 f-14 px-2">
+                            <li class="dblue float-right"><i class="fa v-2 fa-book pl-1"></i>
+                                نمونه سوالات
+                            </li>
+                            <li class="float-left">180</li>
+                            <li class="clearfix my-3"></li>
+                            <li class="float-right"><i class="fa v-2 fa-comment pl-1"></i>
+                                نظرات
+                            </li>
+                            <li class="float-left">70</li>
+                            <li class="clearfix"></li>
+                        </ul>
+                        <div class="text-center">
+                            <p class="badge badge-secondary badge-pill">
+                                <i class="fa fa-calendar pl-1"></i>
+                                15 دی 98</p>
+                        </div>
+                    </div>
+                </div>
+            </article>
+        </section>
+    </div>
+    <div class="container-fluid py-5 my-4 border-bottom px-md-4 bc9" id="NewsComment">
+        <h2 class="col-12 text-center mb-5 best-dark"><i class="fa fa-th-list f-27 pl-2 v-1"></i>آخرین های سایت</h2>
+        <section class="row justify-content-center" id="NewsComment_row">
+            <div class="col-11 col-md-8 col-lg-4 mb-2">
+                <div class="bg-white border bc9 rounded shadow-sm">
+                    <h3 class="p-3 dblue f-20 text-center c444 border-bottom">لورم اپیسورم</h3>
+                    <ul class="list-group py-2">
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-11 col-md-8 col-lg-4 mb-2">
+                <div class="bg-white border bc9 rounded shadow-sm">
+                    <div class="">
+                        <h3 class="p-3 dblue f-20 text-center c444 border-bottom">نظــرات دانشجویان</h3>
+                        <div class="carousel slide" id="comment" data-ride="casrousel">
+                            <div class="carousel-inner rounded">
+                                <div class="carousel-item mt-2 px-4 py-1 active c666">
+                                    <h3 class="caption text-right f-16 my-1">
+                                        <i class="fa pl-6 v-1 fa-user-alt"></i>
+                                        سوالات علوم
+                                    </h3>
+                                    <p class="text-justify p-2 mt-3">لورم ایپسوم متن ساختگی با
+                                        تولید
+                                        سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+                                        روزنامه
+                                        آینده شناخت فراوان جامعه و متخصصان را می طلبد تا با نرم افزارها شناخت بیشتری را
+                                        برای
+                                        طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                        کرد. </p>
+                                </div>
+                                <div class="carousel-item mt-2 px-4 py-1 c666">
+                                    <h3 class="caption text-right f-16 my-1">
+                                        <i class="fa pl-6 v-1 fa-user-alt"></i>
+                                        سوالات ریاضی
+                                    </h3>
+                                    <p class="text-justify p-2 mt-3">لورم ایپسوم متن ساختگی با
+                                        تولید
+                                        سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها و متون بلکه
+                                        روزنامه
+                                        طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                        کرد. </p>
+                                </div>
+                                <div class="carousel-item mt-2 px-4 py-1 c666">
+                                    <h3 class="caption text-right f-16 my-1">
+                                        <i class="fa pl-6 v-1 fa-user-alt"></i>
+                                        سوالات زبان
+                                    </h3>
+                                    <p class="text-justify p-2 mt-3">لورم ایپسوم متن ساختگی با
+                                        سادگی نامفهوم از صنعت چاپ و با استفاده از طراحان گرافیک است. چاپگرها
+                                        طراحان رایانه ای علی الخصوص طراحان خلاقی و فرهنگ پیشرو در زبان فارسی ایجاد
+                                        کرد. </p>
+                                </div>
+
+                            </div>
+                            <a href="#comment" class="carousel-control-prev f-22 font-weight-bold" data-slide="prev">
+                                <i class="fa fa-chevron-left"></i>
+                            </a>
+                            <a href="#comment" class="carousel-control-next f-22 font-weight-bold" data-slide="next">
+                                <i class="fa fa-chevron-right"></i>
+                            </a>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-11 col-md-8 col-lg-4 mb-2">
+                <div class="bg-white border bc9 rounded shadow-sm">
+                    <h3 class="p-3 dblue f-20 text-center c444 border-bottom">لورم اپیسورم</h3>
+                    <ul class="list-group py-2">
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                        <li class="list-group-item border-0 py-2"><a href="#" class="text-primary">لورم اپیسورم متن
+                            ساختگی</a></li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="container">
+        <section class="row justify-content-center" id="suggestion">
+            <div class="col-12 col-md-10 text-center mt-5 font-weight-bold">
+                <h2 class="f-md-22">آمار منتشرات</h2>
+                <ul class="row mt-3 f-30 f-md-15">
+                    <li class="col-4 text-success text-type"><span class='numscroller' data-min="1" data-delay="1"
+                                                                   data-increment="100">38966</span>
+                        <p class="c555 f-15 f-md-13">نمونه سوال</p></li>
+                    <li class="col-4 text-primary"><span class='numscroller' data-min="1" data-delay="1"
+                                                         data-increment="12">5658</span>
+                        <p class="c555 f-15 f-md-13">محتوای آموزشی</p></li>
+                    <li class="col-4 text-warning"><span class='numscroller' data-min="1" data-delay="1"
+                                                         data-increment="1">0</span>
+                        <p class="c555 f-15 f-md-13">پرسش و پاسخ</p></li>
+                </ul>
+            </div>
+        </section>
+    </div>
+</main>
+<!--footer-->
+<footer class="container-fluid mt-3 border-top bg-white">
+    <div class="row text-center py-1 justify-content-center">
+        <div class="col-12 col-md-6 col-lg-4">
+            <a href="#">
+                <img src="images/logo.png" width="100" height="100" alt="logo">
+            </a>
+            <ul class="mt--8">
+                <li class="py-6">
+                    <a href="#" class="dblue ml-3"><i class="fa fa-home f-17  pl-2 v-1"></i>خـانه</a>
+                </li>
+                <li class="py-6">
+                    <a href="contact.html" class="dblue mr-3"><i class="fa fa-phone f-17  pl-2 v-1"></i>تماس با ما</a>
+                </li>
+                <li class="py-6">
+                    <a href="#" class="dblue"><i class="fa fa-book f-17  pl-2 v-1"></i>سـوالات</a>
+                </li>
+                <li class="py-6">
+                    <a href="about.html" class="dblue"><i class="fa fa-users f-17  pl-2 v-1"></i>درباره ما</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-10 col-sm-8 col-md-6 col-lg-5 mt-4 pt-1 pr-md-5">
+            <h3 class="org mb-4 pb-2 f-25 text-right mr-5 pr-5"><i class="fas pl-2 v-2  f-22 fa-list"></i>دستـه بنـدی
+            </h3>
+            <ul class="category-footer text-right">
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">نـمونه سوال امتحانی</a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">فیلم،پاورپوینت،محتوای آموزشی</a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">راهنما</a>
+                </li>
+                <li class="position-relative">
+                    <a href="#" class="dblue d-block">قوانین و مقررات</a>
+                </li>
+            </ul>
+        </div>
+        <div class="col-9 col-lg-3 justify-content-center NamadImage-footer d-flex align-items-center">
+            <img src="images/logo-samandehi.png" class="ml-3" alt="namade1">
+            <img src="images/logo-saramad.png" alt="namade2">
+        </div>
+        <p class="col-12 mt-3 f-md-13 c777">
+            تمامی حقوق مادی و معنوی محصولات و محتوای این سایت متعلق به " گـــنجینه ســوال " بوده و هر گونه کپی برداری از
+            محتوا و محصولات سایت غیر مجاز و بدون رضایت ماست.
+        </p>
+    </div>
+    <button class="btn btn-secondary rounded-circle fixed-bottom" id="back-top"><i class="fa fa-chevron-up"></i>
+    </button>
+</footer>
+</body>
+</html>
